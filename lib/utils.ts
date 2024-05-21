@@ -66,6 +66,7 @@ export const formatPrice = (price: string) => {
   return formattedPrice;
 };
 
+//向当前 URL 查询参数添加或更新一个键值对，并返回更新后的 URL 字符串。
 export function formUrlQuery({ params, key, value }: UrlQueryParams) {
   const currentUrl = qs.parse(params);
 
@@ -76,7 +77,7 @@ export function formUrlQuery({ params, key, value }: UrlQueryParams) {
       url: window.location.pathname,
       query: currentUrl,
     },
-    { skipNull: true }
+    { skipNull: true } // 跳过值为 null 的参数
   );
 }
 

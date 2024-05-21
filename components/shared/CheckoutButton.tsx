@@ -25,8 +25,9 @@ const CheckoutButton = ({ event }: { event: IEvent }) => {
               <Link href="/sign-in">Get Tickets</Link>
             </Button>
           </SignedOut>
+
           <SignedIn>
-            <Checkout event={event} userId={userId}></Checkout>
+            <Checkout event={event} userId={userId} />
           </SignedIn>
         </>
       )}
